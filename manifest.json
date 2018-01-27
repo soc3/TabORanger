@@ -1,0 +1,22 @@
+{
+  "name": "Sort Tabs",
+  "version": "2.0.0",
+  "description": "Allows users to rearrange tabs using keyboard shortcuts",
+  "author": "Arpit Gupta",
+  "manifest_version": 2,
+  "short_name": "Sort Tabs",
+  "content_scripts": [{
+          "js":["jquery3.3.1.min.js"],
+          "matches": [ "http://*/*", "https://*/*"]
+      }],
+  "permissions": [
+    "tabs","http://api.meaningcloud.com/*"
+  ],
+  "browser_action": {
+    "default_icon": "icon16.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon16.png"
+  }
+}

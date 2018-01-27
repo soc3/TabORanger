@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+<style>
+.btn-group button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 8px 50px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 100%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
+</style>
+<body>
+
+<div class="btn-group">
+  <button type="button" id="group" onclick="doGroup()">By Group</button>
+  <button id="title" onclick="doTitle()">By Title</button>
+  <button id="url" onclick="doUrl()">By URL</button>
+</div>
+<script src="./background.js"></script>
+</body>
+</html>

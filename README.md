@@ -8,6 +8,7 @@ Document Clustering using bisecting K-means algorithm.
 
 API used : meaningcloud
 
+Platform:
 Html, Css, Javascript
 Netbeans (IDE)
 

@@ -15,6 +15,8 @@ TabORanger/tabOranger.png
 
 ![Screenshot](https://github.com/soc3/TabORanger/blob/master/tabOranger.png)
 
+![Screenshot](https://github.com/soc3/TabORanger/blob/master/tabs.png)
+
 
 Team Name: Illuminati
 

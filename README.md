@@ -12,7 +12,6 @@ Platform:
 Html, Css, Javascript
 Netbeans (IDE)
 
-TabORanger/tabOranger.png
 
 ![Screenshot](https://github.com/soc3/TabORanger/blob/master/tabOranger.png)
 

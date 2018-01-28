@@ -6,6 +6,9 @@ Tools Used:
 Natural Language Processing - text classification based on content, text preprocessing : Lemmatization,
 Document Clustering using bisecting K-means algorithm.
 
+Other Features include:
+Sorting tabs by title and URLs.
+
 API used : meaningcloud
 
 Platform:

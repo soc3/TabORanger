@@ -1,4 +1,5 @@
 var doGroup = function() {
+    myFunc();
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
     var tempTabs;
@@ -21,12 +22,13 @@ var doGroup = function() {
                     }
                 }
             }
-            alert('going to move properties');
+            document.getElementById('group').innerHTML = "By Content";
             for ( var i = 0 ; i < tempTabs.length ; i++)
             {
                 var moveProperties = {index:arr[i]};
-                chrome.tabs.move(tempTabs[i].id,moveProperties);
+                chrome.tabs.move(tempTabs[i].id,moveProperties);    
             }
+            
         }
     });
     var data = "key=536589752258a422b8dc6d26e1127a13&lang=en&txt=";
@@ -46,19 +48,16 @@ var doGroup = function() {
         for ( var i = 0 ;i < my_titles.length ; i++)
         {
             my_titles[i] = my_titles[i].replace("Uncategorized","");
-            my_titles[i] = my_titles[i].replace(">"," ");
-            my_titles[i] = my_titles[i].replace("|"," ");
-            my_titles[i] = my_titles[i].replace("-","");
+            my_titles[i] = my_titles[i].replace("/[^a-zA-Z? ]/g, "," ");
             my_titles[i] = my_titles[i].replace("  "," ");
-            alert(my_titles[i]);
+            
         }
                 
-            data = data.concat(my_titles[0]);
+            data = data.concat("\n",my_titles[0]);
             for(var i = 1 ; i < my_titles.length; i++)
             {
                 data = data.concat("\n",my_titles[i]);
             }
-            alert("data "+data);
             xhr.open("POST", "http://api.meaningcloud.com/clustering-1.1");
             xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
             
@@ -78,17 +77,14 @@ var doGroup = function() {
                 
                 var tabObject = JSON.parse(this.responseText);
                 my_new_titles[count] = my_titles[count];
-                alert(this.responseText);
                 for(var j =  0 ;j < tabObject.category_list.length;j++)
                 {
                     my_new_titles[count] = my_new_titles[count].concat(" ",tabObject.category_list[j].label);
-                    alert('here');
                 }
                 count++;
                 
                 if(count == my_titles.length)
                 {
-                    alert('count finished');
                     func(my_titles);
                 }
               }
@@ -112,7 +108,55 @@ var doGroup = function() {
     
     chrome.tabs.query({ currentWindow: true}, moveAll);
 };
+
+var myFunc = function(){
+    document.getElementById('group').innerHTML = "Waiting";
+}
+
+var doTitle = function()
+{
+    var move = function(tabs){
+        tabs.sort(function(a,b){
+            if(a.title<b.title)
+                return -1;
+            else if(a.title.toLowerCase()===b.title.toLowerCase())
+                return 0;
+            else
+                return 1;
+        });
+        for ( var i = 0 ; i < tabs.length ; i++ )
+        {
+            var moveProperties = {index : i};
+            chrome.tabs.move(tabs[i].id,moveProperties);
+        }
+    }
+    chrome.tabs.query({ currentWindow: true}, move);
+}
+
+var doUrl = function()
+{
+    var move = function(tabs){
+        tabs.sort(function(a,b){
+            if(a.url<b.url)
+                return -1;
+            else if(a.url.toLowerCase()===b.url.toLowerCase())
+                return 0;
+            else
+                return 1;
+        });
+        for ( var i = 0 ; i < tabs.length ; i++ )
+        {
+            var moveProperties = {index : i};
+            chrome.tabs.move(tabs[i].id,moveProperties);
+        }
+    }
+    chrome.tabs.query({ currentWindow: true}, move);
+}
+
+var doAll = function(){
+    document.location.href = "AllTabs.html";
+}
 document.getElementById('group').addEventListener('click', doGroup);
-
-
-
+document.getElementById('title').addEventListener('click', doTitle);
+document.getElementById('url').addEventListener('click', doUrl);
+document.getElementById('doAll').addEventListener('click',doAll);

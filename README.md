@@ -7,10 +7,10 @@ A Google Chrome Extension which groups tabs on the basis of webpage content usin
 Natural Language Processing - text classification based on content, text preprocessing : Lemmatization,
 Document Clustering using bisecting K-means algorithm.
 
-# Other Features include:
+# Other Features:
 Sorting tabs by title and URLs.
 
-# API used :
+# API:
 meaningcloud
 
 # Platform:

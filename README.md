@@ -3,6 +3,7 @@
 A Google Chrome Extension which groups tabs on the basis of webpage content using Machine Learning.
 
 Tools Used:
+
 Natural Language Processing - text classification based on content, text preprocessing : Lemmatization,
 Document Clustering using bisecting K-means algorithm.
 
@@ -25,7 +26,7 @@ Team Name: Illuminati
 
 Team Members:
 
-Sushant Oberoi
+[a link](https://github.com/soc3)
 Abhinav Dixit
 Vaibhav Bharadwaj
 Arpit Gupta

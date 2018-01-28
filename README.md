@@ -1,6 +1,7 @@
 # TabORanger
 
-A Google Chrome Extension which groups tabs on the basis of webpage content using Machine Learning. 
+A Google Chrome Extension which groups tabs on the basis of webpage content using Machine Learning. Clustering of
+browser tabs is done to make browsing easier with google chrome. 
 
 # Tools Used:
 

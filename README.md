@@ -26,7 +26,7 @@ Team Name: Illuminati
 
 Team Members:
 
-[a link](https://github.com/soc3)
+Sushant Oberoi
 Abhinav Dixit
 Vaibhav Bharadwaj
 Arpit Gupta

@@ -2,17 +2,18 @@
 
 A Google Chrome Extension which groups tabs on the basis of webpage content using Machine Learning.
 
-Tools Used:
+# Tools Used:
 
 Natural Language Processing - text classification based on content, text preprocessing : Lemmatization,
 Document Clustering using bisecting K-means algorithm.
 
-Other Features include:
+# Other Features include:
 Sorting tabs by title and URLs.
 
-API used : meaningcloud
+# API used :
+meaningcloud
 
-Platform:
+# Platform:
 Html, Css, Javascript
 Netbeans (IDE)
 
@@ -22,11 +23,12 @@ Netbeans (IDE)
 ![Screenshot](https://github.com/soc3/TabORanger/blob/master/tabs.png)
 
 
-Team Name: Illuminati
+# Team Name: 
+Illuminati
 
-Team Members:
+# Team Members:
 
-Sushant Oberoi
-Abhinav Dixit
-Vaibhav Bharadwaj
-Arpit Gupta
+<a href="https://www.github.com/soc3">Sushant Oberoi</a><br>
+<a href="https://github.com/abhinav23dixit">Abhinav Dixit</a><br>
+<a href="https://github.com/vkvaibhav4">Vaibhav Bharadwaj</a><br>
+<a href="https://github.com/Codarp/">Arpit Gupta</a><br>

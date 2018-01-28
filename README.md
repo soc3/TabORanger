@@ -13,7 +13,7 @@ Netbeans (IDE)
 
 TabORanger/tabOranger.png
 
-![Screenshot](https://www.github.com/soc3/TabORanger/tabOranger.png)
+![Screenshot](https://github.com/soc3/TabORanger/blob/master/tabOranger.png)
 
 
 Team Name: Illuminati

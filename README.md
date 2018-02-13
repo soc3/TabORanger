@@ -23,10 +23,6 @@ Netbeans (IDE)
 
 ![Screenshot](https://github.com/soc3/TabORanger/blob/master/tabs.png)
 
-
-# Team Name: 
-Illuminati
-
 # Team Members:
 
 <a href="https://www.github.com/soc3">Sushant Oberoi</a><br>
